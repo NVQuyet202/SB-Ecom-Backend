@@ -7,8 +7,8 @@ import com.ecommerce.sb_ecom.payload.response.CategoryResponse;
 import java.util.List;
 
 public interface CategoryService {
-    CategoryResponse getAllCategories();
-    void createNewCategory (CategoryDTO category);
-    String deleteCategory(Long categoryId);
-    Category updateCategory(Category category,Long categoryId);
+    CategoryResponse getAllCategories(Integer pageNumber, Integer pageSize,String sortBy, String sortOrder);
+    CategoryDTO createNewCategory (CategoryDTO category);
+    CategoryDTO deleteCategory(Long categoryId);
+    CategoryDTO updateCategory(CategoryDTO category,Long categoryId);
 }
