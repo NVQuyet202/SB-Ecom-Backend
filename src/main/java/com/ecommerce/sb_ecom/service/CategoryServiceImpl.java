@@ -71,7 +71,7 @@ public class CategoryServiceImpl implements CategoryService{
 
 
         categoryRepository.delete(saveCategory);
-        return modelMapper.map(categoryRepository.save(saveCategory),CategoryDTO.class);
+        return modelMapper.map(saveCategory,CategoryDTO.class);
     }
 
     @Override
