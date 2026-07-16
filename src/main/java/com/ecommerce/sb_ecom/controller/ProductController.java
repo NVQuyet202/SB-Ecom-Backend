@@ -63,7 +63,7 @@ public class ProductController {
         return new ResponseEntity<>(productsByKey,HttpStatus.OK);
     }
 
-    @PutMapping("/public/products/{productId}")
+    @PutMapping("/seller/products/{productId}")
     public ResponseEntity<ProductDTO> updateProduct (
             @Valid @PathVariable Long productId,
             @RequestBody ProductDTO productDTO
@@ -72,7 +72,7 @@ public class ProductController {
         return new ResponseEntity<>(saveProduct,HttpStatus.OK);
     }
 
-    @DeleteMapping("/public/products/{productId}")
+    @DeleteMapping("/seller/products/{productId}")
     public ResponseEntity<ProductDTO> deleteProduct (
             @PathVariable Long productId
     ) {
@@ -80,7 +80,7 @@ public class ProductController {
         return new ResponseEntity<>(status,HttpStatus.OK);
     }
 
-    @PutMapping("/public/products/{productId}/image")
+    @PutMapping("/seller/products/{productId}/image")
     public ResponseEntity<ProductDTO> updateProductImage (
             @PathVariable Long productId, @RequestParam("Image")MultipartFile image
             ) throws IOException {

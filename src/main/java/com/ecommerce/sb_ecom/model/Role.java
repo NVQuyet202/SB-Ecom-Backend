@@ -4,7 +4,6 @@ import jakarta.persistence.*;
 import lombok.*;
 
 @NoArgsConstructor
-@AllArgsConstructor
 @Getter
 @Setter
 @Entity
@@ -19,4 +18,9 @@ public class Role {
     @Enumerated(value = EnumType.STRING)
     @Column(length = 20, name = "role_name")
     private AppRole roleName;
+
+    public Role(AppRole roleName) {
+        this.roleName = roleName;
+    }
+
 }
